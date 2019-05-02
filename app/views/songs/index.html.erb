@@ -7,7 +7,7 @@
     <th>Release Year</th>
     <th>Delete</th>
   </tr>
-  <% @songs.each do |song| %>
+  <%@songs.each do |song|%>
     <tr>
       <td><%=song.title%></td>
       <td><%=song.artist_name%></td>
@@ -15,4 +15,5 @@
       <td><%=song.release_year if song.released%></td>
       <td><%=link_to "Delete", song, method: :delete, data: { confirm: "Really?" }%></td>
     </tr>
+  <%end%>
 </table>
